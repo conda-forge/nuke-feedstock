@@ -1,5 +1,5 @@
 {% set name = "nuke" %}
-{% set version = "8.1.1" %}
+{% set version = "8.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/nuke-build/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 21fd287cc2376b8a893ec6e29aa19ce675983f9cad25e0ea5c2a85391be79223
+  sha256: 98573ba43b5ad4b9290556ca5a64b18674737a06dd5fced4905a9007acc27623
 
 build:
   noarch: generic
