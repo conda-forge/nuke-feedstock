@@ -3,7 +3,7 @@ About nuke-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nuke-feedstock/blob/main/LICENSE.txt)
 
-Home: https://nuke.build
+Home: https://nuke.build/
 
 Package license: MIT
 
