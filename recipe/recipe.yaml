@@ -1,17 +1,17 @@
-{% set name = "nuke" %}
-{% set version = "8.1.4" %}
+context:
+  version: 8.1.4
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: nuke
+  version: ${{ version }}
 
 source:
-  url: https://github.com/nuke-build/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://github.com/nuke-build/nuke/archive/${{ version }}.tar.gz
   sha256: 07bac1d46954935774e785a33e103b4ab6d8dfb2e5b13cf29bc5d50b8bea887f
 
 build:
-  noarch: generic
   number: 0
+  noarch: generic
 
 requirements:
   host:
@@ -20,18 +20,18 @@ requirements:
   run:
     - dotnet
 
-test:
-  commands:
-    - {{ name }} | grep -q "Could not find .nuke directory/file"
+tests:
+  - script:
+      - nuke | grep -q "Could not find .nuke directory/file"
 
 about:
-  home: https://nuke.build
   license: MIT
   license_file:
     - LICENSE
     - license-files/
   summary: The AKEless Build System for C#/.NET
-  dev_url: https://github.com/nuke-build/{{ name }}
+  homepage: https://nuke.build
+  repository: https://github.com/nuke-build/nuke
 
 extra:
   recipe-maintainers:
