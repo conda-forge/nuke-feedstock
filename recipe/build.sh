@@ -27,3 +27,5 @@ tee ignored_packages.json << EOF
 ["Humanizer.Core", "YamlDotNet"]
 EOF
 dotnet-project-licenses --input source/Nuke.GlobalTool/Nuke.GlobalTool.csproj -t -d license-files -ignore ignored_packages.json
+
+rm ${PREFIX}/bin/dotnet
