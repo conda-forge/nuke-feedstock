@@ -1,5 +1,5 @@
 context:
-  version: 8.1.4
+  version: "9.0.4"
 
 package:
   name: nuke
@@ -7,16 +7,16 @@ package:
 
 source:
   url: https://github.com/nuke-build/nuke/archive/${{ version }}.tar.gz
-  sha256: 07bac1d46954935774e785a33e103b4ab6d8dfb2e5b13cf29bc5d50b8bea887f
+  sha256: 8b5611c07147a6a9b633a79d7e867ccaf99a24704b492c0fc745a9b6f65946fe
 
 build:
-  number: 1
+  number: 0
   noarch: generic
 
 requirements:
   host:
     - dotnet
-    - nuget-license
+    - nuget-license 3.0.*
   run:
     - dotnet
 
