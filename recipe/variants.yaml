@@ -1,0 +1,4 @@
+dotnet:
+  - 8.0
+nuget-license:
+  - 3.0
