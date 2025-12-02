@@ -1,5 +1,5 @@
 context:
-  version: "9.0.4"
+  version: "10.1.0"
 
 package:
   name: nuke
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/nuke-build/nuke/archive/${{ version }}.tar.gz
-  sha256: 8b5611c07147a6a9b633a79d7e867ccaf99a24704b492c0fc745a9b6f65946fe
+  sha256: 1991cd268b1e48b25081adff412b3bf3bbf0b3d34dfbfdb8673eac8999e1556a
 
 build:
   number: 0
