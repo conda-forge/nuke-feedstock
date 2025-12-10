@@ -9,8 +9,8 @@ ln -sf ${DOTNET_ROOT}/dotnet ${PREFIX}/bin
 # Build package with dotnet publish
 rm -rf global.json
 framework_version="$(dotnet --version | sed -e 's/\..*//g').0"
-sed -i "s?<TargetFrameworks>.*</TargetFrameworks>?<TargetFrameworks>net${framework_version}</TargetFrameworks>?" \
-    source/Nuke.ProjectModel/Nuke.ProjectModel.csproj
+# sed -i "s?<TargetFramework>.*</TargetFramework>?<TargetFramework>net${framework_version}</TargetFramework>?" \
+#     source/Nuke.ProjectModel/Nuke.ProjectModel.csproj
 
 dotnet publish --no-self-contained "source/Nuke.GlobalTool/Nuke.GlobalTool.csproj" --output ${PREFIX}/libexec/${PKG_NAME}
 rm -rf ${PREFIX}/libexec/${PKG_NAME}/Nuke.GlobalTool
